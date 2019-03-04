@@ -1,0 +1,228 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: Roboto, sans-serif;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    line-height: 1.5em;
+    text-decoration: none solid rgb(255, 255, 255);
+    overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+}
+
+/* Standaard padding aan de linker/rechter kant gegeven van 1em */
+main {}
+
+/* Deze wrapper hoort bij de footer dit komt van: CSSTricks */
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -3.125em;
+}
+
+/* Standaard waarde van de H1 */
+h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/* Standaard waarde van de H2 */
+h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Standaard waarde van de H3 */
+h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Standaard waarde van de H4 */
+h4 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Standaard waarde van de p */
+p {
+    font-family: Roboto, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Navigatie */
+
+header {
+    background-color: #675C53;
+    height: 2.5em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 3rem auto 13rem 4rem;
+    grid-template-rows: 100% auto;
+    align-items: center;
+
+}
+
+header > a {
+    grid-column-start: 2;
+    align-self: center;
+}
+
+nav {
+    grid-column-start: 4;
+    grid-template-columns: 30% 15%;
+    display: inline-grid;
+    justify-content: end;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img#uov_logo {
+    height: 1.625em;
+    position: absolute;
+    top: 0.438em;
+}
+
+img#uov_icon {
+    height: 1.625em;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    padding-right: 0.5em;
+}
+
+img#uov_zoeken {
+    height: 1.625em;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    padding-right: 0.5em;
+}
+
+/* zoeken */
+
+.zoek1 {
+    box-shadow: inset 0 -0.2rem 0 #E7762B;
+    background-color: #675C53;
+    padding: 0.1rem 0.5rem;
+    grid-column-end: 1;
+    align-self: center;
+    height: 1.8rem;
+    width: 15em;
+    color: white;
+    border: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+.zoek {
+    display: none;
+}
+
+/* footer */
+
+.push {
+    height: 50px;
+}
+
+footer {
+    background-color: #675C53;
+    padding-right: 0.5em;
+    padding-left: 0.9em;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#uov_logo_footer {
+    height: 1.9em;
+    margin-top: 0.8em;
+}
+
+#uov_pijl_omhoog {
+    height: 1.625em;
+    top: 0.738em;
+}
+
+footer a:last-of-type {
+    padding: 1em 2em;
+    margin-right: -0.6em;
+    background-color: #7E715F;
+}
+
+/* Verhaal */
+
+div img:nth-last-of-type(1) {
+    width: 100%;
+}
+
+div img:nth-last-of-type(2) {
+    display: none;
+}
+
+div img:nth-last-of-type(3) {
+    display: none;
+}
+
+div img:nth-last-of-type(4) {
+    display: none;
+}
+
+@media screen and (min-width: 18.125em),
+(max-width: 37.5em) {}
+
+@media screen and (min-width: 37.5em) {
+
+    div img:nth-last-of-type(1) {
+        display: none;
+    }
+
+    div img:nth-last-of-type(2) {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 56.25em) {
+
+    div img:nth-last-of-type(2) {
+        display: none;
+    }
+
+    div img:nth-last-of-type(3) {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 75em) {
+
+    div img:nth-last-of-type(3) {
+        display: none;
+    }
+
+    div img:nth-last-of-type(4) {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 112.5em) {
+
+    header + div {
+        max-width: 130rem;
+        margin: auto;
+    }
+
+}

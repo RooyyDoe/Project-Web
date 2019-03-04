@@ -1,0 +1,325 @@
+<!-- Bronnen die ik heb gebruikt:
+https://stackoverflow.com/
+https://www.w3schools.com/
+https://medium.com/@fadysamirsadek/css-units-explained-9a460f5e0f29
+https://zellwk.com/blog/rem-vs-em/
+https://css-tricks.com/
+https://developer.mozilla.org
+https://codepen.io/shshaw/pen/gsFch
+
+De stijl die ik heb gebruikt om deze site vorm te geven,
+komt van de site: https://www.u-ov.info/
+-->
+
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <!-- Alle meta data en hier worden alle externe sheets gelinkt. -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Verhalen website voor U-OV ">
+    <meta name="author" content="Roy Kuijper">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="_css/main.css" rel="stylesheet" type="text/css">
+    <title>Verhalen U-OV</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dit is de navigatie bar -->
+        <a href="/index.html" title="homepage"><img id="uov_logo" alt="uov_wit" src="_images/Logo_White.png"></a>
+        <nav>
+            <form action="zoeken.html">
+                <input type="text" class="zoek" id="zoekbalk" placeholder="Zoeken">
+            </form>
+            <a href="#" title="zoeken"><img id="uov_zoeken" alt="uov_zoek" src="_images/magnifying-glass.png"></a>
+            <a href="#" title="profiel"><img id="uov_icon" alt="uov_profiel" src="_images/profiel.png"></a>
+        </nav>
+    </header>
+    <div>
+        <div class="background">
+            <div class="banners">
+                <!-- Dit is het article wat op de banner staat. (Paranoia) -->
+                <section>
+                    <article class="banner1">
+                        <img id="uov_eric_lucassen_banner" alt="eric lucassen" src="_images/rosakoopman-ericlucassen.jpg">
+                        <div>
+                            <h2>Eric&nbsp;Lucassen</h2>
+                            <img id="uov_clock_banner1" alt="uov_clock" src="_images/clock.svg">
+                            <h3>1m&nbsp;geleden</h3>
+                        </div>
+                    </article>
+                    <!-- Dit is het article wat op de banner staat. (Paranoia) -->
+                    <article class="banner2">
+                        <img id="uov_job_cohen_banner" alt="job cohen" src="_images/STIJLOEFENINGEN_22.jpg">
+                        <div>
+                            <h2>Job&nbsp;Cohen</h2>
+                            <img id="uov_clock_banner2" alt="uov_clock" src="_images/clock.svg">
+                            <h3>5m&nbsp;geleden</h3>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <!-- De filter button met hierin het sorteer systeem (Moet nog naar gekeken worden) -->
+        <div class="button_drop">
+            <button id="dropbtn"> Filteren <img alt="pijl" id="pijl" class="pijltje" src="_images/arrow-point-to-right.png"></button>
+            <div id="dropmenu" class="menu">
+                <form>
+                    <fieldset>
+                        <legend>Thema's:</legend>
+                        <ul>
+                            <li>
+                                <label class="container">Opinie
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Maatschappij
+                                    <input type="checkbox" name="maatschappij">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Politiek
+                                    <input type="checkbox" name="politiek">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Religie
+                                    <input type="checkbox" name="religie">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Boulevard
+                                    <input type="checkbox" name="boulevard">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Handel &amp; nijverheid
+                                    <input type="checkbox" name="kunst">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Fictie
+                                    <input type="checkbox" name="fictie">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Non-fictie
+                                    <input type="checkbox" name="non-fictie">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Correspondentie
+                                    <input type="checkbox" name="correspondentie">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Interview
+                                    <input type="checkbox" name="interview">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Kort nurks
+                                    <input type="checkbox" name="kort_nurks">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Cartoons
+                                    <input type="checkbox" name="cartoons">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Komedie
+                                    <input type="checkbox" name="komedie">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Verhaal grote:</legend>
+                        <ul>
+                            <li>
+                                <label class="container">Kort
+                                    <input type="checkbox" name="kort">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Middel
+                                    <input type="checkbox" name="middel">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">Lang
+                                    <input type="checkbox" name="lang">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Leeftijd:</legend>
+                        <ul>
+                            <li>
+                                <label id="jonger">
+                                    <input type="radio" name="leeftijd" value="jonger" checked>
+                                    Jonger dan 10
+                                </label>
+                            </li>
+                            <li>
+                                <label id="tussen">
+                                    <input type="radio" name="leeftijd" value="tussen">
+                                    Tussen 10 en 15 jaar
+                                </label>
+                            </li>
+                            <li>
+                                <label id="ouder">
+                                    <input type="radio" name="leeftijd" value="ouder">
+                                    Ouder dan 15 jaar
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button id="filteren" type="button" value="resultaat">Laat resultaat zien</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Ik heb hier twee voorbeeld artikelen gemaakt -->
+        <section>
+            <article>
+                <img id="uov_eric_lucassen" alt="eric lucassen" src="_images/rosakoopman-ericlucassen.jpg">
+                <div class="eric">
+                    <h1>Eric&nbsp;Lucassen</h1>
+                    <p>Ik stap bus 21 uit terwijl ik mijn zoon op nog geen halve meter hinderlijk achtervolg. De gore klootzak heeft een uur geleden in z’n luier gescheten..</p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>20</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>8</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_job_cohen" alt="job cohen" src="_images/STIJLOEFENINGEN_22.jpg">
+                <div class="job">
+                    <h1>Job&nbsp;Cohen</h1>
+                    <p>Euh, ik stap, euh uit bus 21. Halte Centraal Station. In de stad waar ik met zoveel plezier burgemeester was. Tot nu toe gaat het goed. De kinderwagen..</p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>23</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>11</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_doof" alt="doof" src="_images/rcsuka-doof-verhaal-v1.jpg">
+                <div class="doof">
+                    <h1>Doof</h1>
+                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege..</p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>29</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>14</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_johan_cruijff" alt="johan cruijff" src="_images/johan.jpg">
+                <div class="johan">
+                    <h1>Johan&nbsp;Cruijff</h1>
+                    <p>De ronk-ronk-bus komt met piiieeepende remmen tot stilstand en opent sssslissend en sssissend haar deuren. Ik stap-stap-stap uit de bus en push..</p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>33</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>8</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_lepra" alt="lepra" src="_images/Lepra_YorickdeWit.jpg">
+                <div class="lepra">
+                    <h1>Lepra</h1>
+                    <p>Op Centraal Station stap ik af van de kar die lijken ophaalt. Ik had een lift gekregen. Mijn zoon ligt in zijn wagentje te slapen. Arm ventje. Gelukkig weet hij.. </p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>39</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>13</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_alzheimer" alt="alzheimer" src="_images/alzheimer.png">
+                <div class="alzheimer">
+                    <h1>Alzheimer</h1>
+                    <p>Ik stap uit, euh… Hoe heet het? Zo’n vervoersdinges op wielen. Van de gemeente. Wit met blauw. Kom. Lijn 12. Of was het 21? Ik weet het niet..</p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>43</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>10</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_nichterig" alt="nichterig" src="_images/Nichterig_Desktop_Luuk_Arts.png">
+                <div class="nichterig">
+                    <h1>Nichterig</h1>
+                    <p>Dus ik stap de bus uit, met mijn zoon in mijn wagen, en ik schrik me daar toch het apenlazarus zeg! Werkelijk heel de omgeving rond Centraal Station.. </p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>45</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>11</h4>
+                    <button type="button">Lees verder</button>
+                </div>
+            </article>
+            <article>
+                <img id="uov_paranoia" alt="paranoia" src="_images/paranoia.jpg">
+                <div class="paranoia">
+                    <h1>Paranoia</h1>
+                    <p>Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk. Zijn gejengel trok veel te veel aandacht. De mensen.. </p>
+
+                    <img alt="likes" src="_images/likes.svg">
+                    <h4>55</h4>
+                    <img alt="comments" src="_images/comments.svg">
+                    <h4>14</h4>
+                    <button type="button"><a href="/verhaal.html">Lees verder</a></button>
+                </div>
+            </article>
+        </section>
+    </div>
+    <!-- Deze div heb ik gemaakt voor het naar beneden pushen van de footer -->
+    <div class="push"></div>
+
+    <!-- Dit is de footer van de website -->
+    <footer>
+        <a href="#" title="homepage"><img id="uov_logo_footer" alt="uov_wit" src="_images/Logo_White.png"></a>
+        <!-- Deze knop gaat je weer naar de bovenkant van de website sturen -->
+        <a href="#"><img id="uov_pijl_omhoog" alt="uov_arrow_up" src="_images/up-arrow.svg"></a>
+    </footer>
+    <script src="_js/main.js"></script>
+</body>
+
+</html>
